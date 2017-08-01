@@ -97,6 +97,7 @@ class ElasticSearchPipeline(object):
         index_action = {
             '_index': index_name,
             '_type': self.settings['ELASTICSEARCH_TYPE'],
+            'pipeline': 'attachment',
             '_source': dict(item)
         }
 
